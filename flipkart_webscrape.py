@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 # Flipkart scraping
-# Source: https://www.edureka.co/blog/web-scraping-with-python/
 """
 Created on Sat Feb  1 17:14:44 2020
 
@@ -28,8 +27,8 @@ for a in soup.findAll('a',href=True, attrs={'class':'_31qSD5'}):
     products.append(name.text)
     prices.append(price.text)
     ratings.append(rating.text)
-    ratingsCount.append(ratingsCount.text)
-    reviewsCount.append(reviewsCount.text)
+    #ratingsCount.append(ratingsCount.text)
+    #reviewsCount.append(reviewsCount.text)
     
 df = pd.DataFrame({'Product Name':products,'Price':prices,'Rating':ratings}) 
-df.to_csv('products.csv', index=False, encoding='utf-8')
+#df.to_csv('products.csv', index=False, encoding='utf-8')
